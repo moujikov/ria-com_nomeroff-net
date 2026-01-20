@@ -24,9 +24,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
 # get project requirements list
 with open("requirements.txt", "r", encoding="utf-8") as fh:
     requirements = fh.read()
-    required_pkgs, required_repos = requirements.split('# git repos')
-    required_pkgs = required_pkgs.split()
-    required_repos = required_repos.split()
+    # requirements.splitlines()
+    # required_pkgs, required_repos = requirements.split('# git repos')
+    # required_pkgs = required_pkgs.split()
+    # required_repos = required_repos.split()
 
 setup(name='nomeroff-net',
       version=__version__,
@@ -46,8 +47,7 @@ setup(name='nomeroff-net',
       author_email='dimabendera@gmail.com, oleg.cherniy@ria.com',
       license='GNU General Public License v3.0',
       packages=find_packages(),
-      install_requires=required_pkgs,
-      dependency_links=required_repos,
+      install_requires=requirements.splitlines(),
       include_package_data=True,
       python_requires='>=3.9',
       zip_safe=False)
