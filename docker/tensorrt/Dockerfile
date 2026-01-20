@@ -3,7 +3,7 @@ FROM nvcr.io/nvidia/pytorch:24.10-py3
 
 # Налаштування таймзони
 ENV DEBIAN_FRONTEND=noninteractive \
-    TZ=Europe/Kiev
+    TZ=Europe/Moscow
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 

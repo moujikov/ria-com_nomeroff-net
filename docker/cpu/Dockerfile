@@ -3,7 +3,7 @@ FROM python:3.12-slim
 
 # Налаштування таймзони
 ENV DEBIAN_FRONTEND=noninteractive \
-    TZ=Europe/Kiev
+    TZ=Europe/Moscow
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
@@ -12,10 +12,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     manpages-dev \
     libglib2.0-0 \
-    libgl1-mesa-glx \
+    libgl1 \
     git \
     python3-setuptools \
     python3-wheel \
+    libturbojpeg0 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 

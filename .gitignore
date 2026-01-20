@@ -20,6 +20,7 @@ data/dataset/*
 !data/dataset/OptionsDetector/numberplate_options_example/*
 !data/dataset/TextDetector/ocr_example/autoria_numberplate_dataset_example/*
 
+data/configs/*
 data/logs/*
 data/models/*
 data/repos/*

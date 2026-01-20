@@ -259,7 +259,7 @@ class OCR(object):
 
     def postprocess(self, net_out_value):
         net_out_value = [p.cpu().numpy() for p in net_out_value]
-        pred_texts = decode_batch(torch.Tensor(net_out_value), self.label_converter)
+        pred_texts = decode_batch(torch.Tensor(np.array(net_out_value)), self.label_converter)
         pred_texts = [pred_text.upper() for pred_text in pred_texts]
         return pred_texts
 
@@ -267,7 +267,7 @@ class OCR(object):
     def predict(self, xs: List or torch.Tensor, return_acc: bool = False) -> Any:
         net_out_value = self.model(xs)
         net_out_value = [p.cpu().numpy() for p in net_out_value]
-        pred_texts = decode_batch(torch.Tensor(net_out_value), self.label_converter)
+        pred_texts = decode_batch(torch.Tensor(np.array(net_out_value)), self.label_converter)
         pred_texts = [pred_text.upper() for pred_text in pred_texts]
         if return_acc:
             if len(net_out_value):

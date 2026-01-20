@@ -466,7 +466,7 @@ class OptionsDetector(object):
         return x
 
     def forward(self, inputs):
-        x = torch.tensor(inputs)
+        x = torch.tensor(np.array(inputs))
         x = x.to(device_torch)
         model_output = self.model(x)
         return model_output
