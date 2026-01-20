@@ -39,10 +39,10 @@ RUN python3 -m pip install pycuda
 RUN python3 -m pip install "ultralytics>=8.3.12" "pytorch_lightning==1.8.6" "opencv_python==4.8.0.74"  "opencv-python-headless==4.8.0.74" "numpy==1.*"
 
 # Встановлення залежностей із репозиторіїв git
-RUN python3 -m pip install "git+https://github.com/ria-com/upscaler.git"
-RUN python3 -m pip install "git+https://github.com/ria-com/craft-text-detector.git"
+RUN python3 -m pip install "git+https://github.com/moujikov/ria-com_upscaler.git"
+RUN python3 -m pip install "git+https://github.com/moujikov/ria-com_craft-text-detector.git"
 RUN python3 -m pip install "git+https://github.com/lilohuang/PyTurboJPEG.git"
-RUN python3 -m pip install "git+https://github.com/ria-com/modelhub-client.git"
+RUN python3 -m pip install "git+https://github.com/moujikov/ria-com_modelhub-client.git"
 
 # Робоча директорія для проекту
 WORKDIR /project/nomeroff-net
