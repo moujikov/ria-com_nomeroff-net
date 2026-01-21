@@ -24,10 +24,6 @@ with open("README.md", "r", encoding="utf-8") as fh:
 # get project requirements list
 with open("requirements.txt", "r", encoding="utf-8") as fh:
     requirements = fh.read()
-    # requirements.splitlines()
-    # required_pkgs, required_repos = requirements.split('# git repos')
-    # required_pkgs = required_pkgs.split()
-    # required_repos = required_repos.split()
 
 setup(name='nomeroff-net',
       version=__version__,
