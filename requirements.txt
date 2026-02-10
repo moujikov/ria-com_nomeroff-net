@@ -11,16 +11,16 @@ pillow
 tqdm
 matplotlib
 scipy
-torch>=1.12
-torchvision>=0.13
-PyYAML>=5.4
+torch
+torchvision
+PyYAML
 seaborn
-pytorch_lightning==1.8.6
+pytorch_lightning
 ipywidgets
 gevent
 termcolor
 scikit-learn
-ultralytics>=8.3.12
+ultralytics
 albumentations
 
 # upscaler @ git+https://github.com/moujikov/ria-com_upscaler.git

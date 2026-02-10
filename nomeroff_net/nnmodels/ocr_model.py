@@ -87,7 +87,7 @@ class NPOcrNet(pl.LightningModule):
         # convolutions
         if backbone is None:
             backbone = resnet18
-        conv_nn = backbone(pretrained=True)
+        conv_nn = backbone(weights='DEFAULT')
         if 'resnet' in str(backbone):
             conv_modules = list(conv_nn.children())[:-3]
         elif 'efficientnet' in str(backbone):

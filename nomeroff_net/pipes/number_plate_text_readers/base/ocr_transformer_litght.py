@@ -64,7 +64,7 @@ class OCRModel(pl.LightningModule):
         self.num_classes = num_classes
 
         # CNN
-        conv_nn = efficientnet_b2(pretrained=True)
+        conv_nn = efficientnet_b2(weights='DEFAULT')
         conv_modules = list(conv_nn.children())[:-2]
         self.cnn = nn.Sequential(*conv_modules)
         _, backbone_c, backbone_h, backbone_w = self.cnn(torch.rand((1, 3, 100, 300))).shape
